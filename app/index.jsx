@@ -23,7 +23,7 @@ const Home = () => {
         }}
       />
       <Header />
-      <TopContainer media={playing} />
+      <TopContainer />
       <RecordingList callback={handleCallback} />
     </View>
   );
