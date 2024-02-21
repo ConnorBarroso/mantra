@@ -21,7 +21,7 @@ const MantraList = () => {
           <TouchableHighlight
             activeOpacity={0.85}
             underlayColor="darkgrey"
-            onPress={() => handlePress(props.fileData)}
+            onPress={() => handlePress(item)}
           >
             <ListItem fileData={item} />
           </TouchableHighlight>
