@@ -4,7 +4,6 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import TopContainer from "../components/TopContainer";
 import Header from "../components/Header";
 import MantraList from "../components/MantraList";
-
 const Home = () => {
   return (
     <View
