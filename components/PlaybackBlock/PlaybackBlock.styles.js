@@ -6,14 +6,13 @@ const PlaybackBlockStyles = StyleSheet.create({
     height: "100%",
     flexDirection: "column",
     justifyContent: "space-between",
+    padding: 5,
   },
   controlPanel: {
     width: "100%",
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    paddingHorizontal: 5,
-    paddingBottom: 5,
   },
   title: {
     textAlign: "left",
