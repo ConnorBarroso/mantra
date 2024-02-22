@@ -4,7 +4,7 @@ import { GestureHandlerRootView } from "react-native-gesture-handler";
 import TopContainer from "../components/TopContainer";
 import Header from "../components/Header";
 import MantraList from "../components/MantraList";
-
+import Footer from "../components/Footer";
 const Home = () => {
   return (
     <View
@@ -31,6 +31,7 @@ const Home = () => {
       >
         <TopContainer />
         <MantraList />
+        <Footer />
       </GestureHandlerRootView>
     </View>
   );

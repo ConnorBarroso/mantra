@@ -9,7 +9,7 @@ const TopContainer = () => {
 
   return (
     <View style={styles.container}>
-      {media ? <PlaybackBlock /> : <RecordingBlock />}
+      {media.title ? <PlaybackBlock /> : <RecordingBlock />}
     </View>
   );
 };
