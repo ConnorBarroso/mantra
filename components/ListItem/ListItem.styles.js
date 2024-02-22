@@ -3,9 +3,10 @@ const ListItemStyles = StyleSheet.create({
   container: {
     width: "100%",
     height: 70,
-    marginBottom: 5,
-    borderBottomWidth: 2,
-    borderBottomColor: "darkgrey",
+    marginVertical: 5,
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-between",
   },
 });
 
