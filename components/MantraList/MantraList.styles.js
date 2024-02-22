@@ -11,6 +11,12 @@ const MantraListStyles = StyleSheet.create({
     height: "100%",
     paddingHorizontal: 5,
   },
+  separator: {
+    width: "100%",
+    height: 2,
+    backgroundColor: "darkgrey",
+    borderRadius: 5,
+  },
 });
 
 export default MantraListStyles;
