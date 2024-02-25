@@ -1,8 +1,8 @@
 import { View, Text, TouchableHighlight } from "react-native";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import RecordButton from "../RecordButton";
 import RecordBlockStyles from "./RecordBlock.styles";
-import useTimer from "../../hooks/useTimer";
+import Timer from "../Timer";
 
 const {
   container,
@@ -14,13 +14,20 @@ const {
 } = RecordBlockStyles;
 const RecordingBlock = () => {
   const [isRecording, setIsRecording] = useState(false);
-  const recordingTime = "00:00";
+  const [isPaused, setIsPaused] = useState(true);
   const handleToggle = () => {
-    const newState = !isRecording;
-    setIsRecording(newState);
+    if (!isRecording) {
+      setIsRecording(true);
+      setIsPaused(false);
+    } else {
+      const newState = !isPaused;
+      setIsPaused(newState);
+    }
   };
 
   const handleSave = () => {
+    setIsRecording(false);
+    setIsPaused(true);
     console.log("SAVED!");
   };
   return (
@@ -29,9 +36,9 @@ const RecordingBlock = () => {
 
       <View style={controlPanel}>
         <View style={saveContainer}>
-          <Text style={buttonText}>{recordingTime}</Text>
+          <Timer isPaused={isPaused} isRecording={isRecording} />
         </View>
-        <RecordButton isRecording={isRecording} handleToggle={handleToggle} />
+        <RecordButton isRecording={!isPaused} handleToggle={handleToggle} />
         <View style={saveContainer}>
           <TouchableHighlight onPress={handleSave}>
             <View style={saveButton}>
