@@ -9,6 +9,7 @@ import Header from "../components/Header";
 import MantraList from "../components/MantraList";
 import { handleDirectory } from "./utils/fileHandler";
 import ErrorPopup from "../components/ErrorPopup";
+handleDirectory();
 
 const Home = () => {
   const [res, req] = Audio.usePermissions();
@@ -17,7 +18,6 @@ const Home = () => {
       await req();
     }
   };
-  handleDirectory();
 
   useEffect(() => {
     if (res === null || res === undefined) {
